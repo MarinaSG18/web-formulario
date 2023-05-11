@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet" />
+        <title>Formulario de encuesta</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <h1 id="title">Forumulario de encuesta</h1>
+        <p id="description">Gracias por tomarse el tiempo para ayudarnos a mejorar la plataforma</p>
+        <form action="" id="survey-form">
+            <fieldset>
+                <label for="name" id="name-label"
+                    >Nombre<input type="text" id="name" name="name" placeholder="Ingresa tú nombre" required />
+                </label>
+                <label for="emial" id="email-label"
+                    >Correo<input type="email" id="email" name="email" placeholder="Ingresa tú correo electronico" required />
+                </label>
+                <label for="number" id="number-label"
+                    >Edad (opcional) <input type="number" id="number" name="number" placeholder="Edad" min="13" max="120" />
+                </label>
+            </fieldset>
+
+            <fieldset>
+                <label id="dropdown-label">
+                    ¿Cuál opción describe tu rol actual?
+                    <select name="dropdown" id="dropdown">
+                        <option value="0">Selecciona un rol</option>
+                        <option value="1">Estudiante</option>
+                        <option value="2">Trabador de tiempo completo</option>
+                        <option value="3">Prácticante de tiempo completo</option>
+                        <option value="4">Prefiero no decir</option>
+                        <option value="5">Otro</option>
+                    </select>
+                </label>
+            </fieldset>
+
+            <fieldset>
+                <label class="question">¿Recomendarías freeCodeCamp a un amigo?</label>
+
+                <label for="definitivamente">
+                    <input class="inline" type="radio" id="definitivamente" name="type-role" value="definitivamente" />
+                    Definitivamente
+                </label>
+                <label for="talvez">
+                    <input class="inline" type="radio" id="talvez" name="type-role" value="talvez" /> Talvez
+                </label>
+                <label for="no">
+                    <input class="inline" type="radio" id="no" name="type-role" value="noseguro" /> No estoy seguro
+                </label>
+            </fieldset>
+
+            <fieldset>
+                <label class="question">¿Qué te gustaría ver una mejora? (Puedes seleccionar más de uno)</label>
+
+                <label for="videos">
+                    <input class="inline" type="checkbox" name="videos" id="videos" value="video" /> Videos
+                </label>
+                <label for="wiki"><input class="inline" type="checkbox" name="wiki" id="wiki" value="wiki" /> Wiki </label>
+                <label for="desafios">
+                    <input class="inline" type="checkbox" name="desafios" id="desafios" value="desafios" /> Desafios
+                </label>
+                <label for="foro"><input class="inline" type="checkbox" name="foro" id="foro" value="foro" /> Foro </label>
+                <label for="comunidad">
+                    <input type="checkbox" class="inline" name="comunidad" id="comunidad" value="comunidad" /> Comunidad Open
+                    Source
+                </label>
+                <label for="projectos">
+                    <input type="checkbox" class="inline" name="projectos" id="projectos" value="projectos" /> Projectos
+                </label>
+                <label for="cursos">
+                    <input class="inline" type="checkbox" name="cur" id="cursos" value="cursos" /> Cursos adicionales
+                </label>
+            </fieldset>
+
+            <fieldset>
+                <label for="comentario" id="comentario-label">
+                    ¿Algun comentario o sugerencia?
+                    <textarea
+                        name="comentario"
+                        id="comentario"
+                        cols="30"
+                        rows="6"
+                        placeholder="Ingresa tú comentario aquí..."
+                    ></textarea>
+                </label>
+            </fieldset>
+            <input id="submit" type="submit" value="Enviar" />
+        </form>
+    </body>
+</html>
